@@ -8,7 +8,7 @@ from google.cloud import translate_v2 as translate
 
 
 PUBSUB_SUBSCRIPTION = "projects/eternal-mark-359107/subscriptions/tweets-sub"
-BIGQUERY_TABLE = "eternal-mark-359107:pygeekle22.tweets_with_language"
+BIGQUERY_TABLE = "eternal-mark-359107:demo.tweets_with_language"
 
 translate_client = translate.Client()
 

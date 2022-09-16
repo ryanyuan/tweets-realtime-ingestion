@@ -7,9 +7,9 @@ from apache_beam.options.pipeline_options import PipelineOptions
 from google.cloud import translate_v2 as translate
 
 
-PUBSUB_SUBSCRIPTION = "projects/eternal-mark-359107/subscriptions/tweets-sub"
-BIGQUERY_TABLE_ENG = "eternal-mark-359107:pygeekle22.tweets_english"
-BIGQUERY_TABLE_OTHERS = "eternal-mark-359107:pygeekle22.tweets_others"
+PUBSUB_SUBSCRIPTION = "projects/eternal-mark-359107/subscriptions/tweets-sub-1"
+BIGQUERY_TABLE_ENG = "eternal-mark-359107:demo.tweets_english"
+BIGQUERY_TABLE_OTHERS = "eternal-mark-359107:demo.tweets_others"
 
 translate_client = translate.Client()
 
@@ -23,10 +23,10 @@ class DetectLanguageDoFn(beam.DoFn):
 
         if tweet_language == "en":
             yield beam.pvalue.TaggedOutput(
-                "eng", {"word": tweet_text, "ts": tweet_created_at}
+                "eng", {"word": tweet_text, "language": tweet_language, "ts": tweet_created_at}
             )
         else:
-            yield {"word": tweet_text, "ts": tweet_created_at}
+            yield {"word": tweet_text, "language": tweet_language, "ts": tweet_created_at}
 
 
 def run():

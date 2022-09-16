@@ -7,7 +7,7 @@ from apache_beam.options.pipeline_options import PipelineOptions
 
 
 PUBSUB_SUBSCRIPTION = "projects/eternal-mark-359107/subscriptions/tweets-sub"
-BIGQUERY_TABLE = "eternal-mark-359107:pygeekle22.tweets"
+BIGQUERY_TABLE = "eternal-mark-359107:demo.tweets"
 
 
 class FormatDoFn(beam.DoFn):
