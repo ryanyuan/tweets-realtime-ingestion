@@ -1,6 +1,8 @@
 # tweets-realtime-ingestion
-Source code for my [PyGeekle22](https://events.geekle.us/python/) `Building Real-time Data Pipeline with Apache Beam` speek.
+Source code for my [PyGeekle22](https://events.geekle.us/python/) `Building Real-time Data Pipeline with Apache Beam` speak.
 This is a realtime data pipeline to ingestion tweets from Pub/Sub to BigQuery using Apache Beam Python SDK
+
+![alt text](./event_screenshot/speak.png)
 
 ## Prerequisite
 ```
