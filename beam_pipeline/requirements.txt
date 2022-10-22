@@ -42,7 +42,7 @@ orjson==3.7.12
 overrides==6.2.0
 packaging==21.3
 proto-plus==1.22.0
-protobuf==3.20.1
+protobuf==3.20.2
 pyarrow==7.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
